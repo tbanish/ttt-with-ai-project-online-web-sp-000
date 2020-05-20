@@ -48,6 +48,7 @@ class Game
     if board.valid_move?(input.to_s)
       board.update(input, current_player)
       board.display
+    binding.pry
     else
       puts "Invalid move, please try again."
       puts input
