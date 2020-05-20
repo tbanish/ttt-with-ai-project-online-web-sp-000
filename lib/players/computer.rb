@@ -19,9 +19,9 @@ module Players
       move = ""
       
       if board.cells[0] == "X" && board.cells[4] == "X" && board.cells[8] == " "
-        else
-          move = board.cells.index(" ") + 1
-        end
+        move = 9
+      else
+        move = board.cells.index(" ") + 1
       end
       move.to_s
     end
