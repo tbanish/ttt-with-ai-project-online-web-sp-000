@@ -16,25 +16,15 @@ module Players
   ]
     
     def move(board)
-      check_wins(board).to_s
+      any_open_space(board)
     end
     
-    def default_move(board)
+    def any_open_space(board)
       move = board.cells.index(" ") + 1
+      move.to_s
     end
     
-    def check_wins(board)
-      WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-          combo[2] + 1
-        else
-          default_move(board)
-        end
-      end
-    end
-      
-      
-      
+
   end
 end
 
