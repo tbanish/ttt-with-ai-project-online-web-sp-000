@@ -36,7 +36,7 @@ module Players
             move = board.cells.index(" ") + 1
           end
         end
-      when @token == "O"
+      elsif board.turn_count % 2 != 0
         WIN_COMBINATIONS.find do |combo|
           if board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " "
             move = combo[2] + 1
