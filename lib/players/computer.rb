@@ -23,11 +23,6 @@ module Players
       move = board.cells.index(" ") + 1
       move.to_s
     end
-    
-    
-    
-     
-    
 
   end
 end
