@@ -16,7 +16,7 @@ module Players
   ]
     
     def move(board)
-      if check_wins(board) = nil
+      if check_wins(board) == FixNum
         check_wins(board).to_s
       else
         default_move(board)
