@@ -21,6 +21,7 @@ module Players
       WIN_COMBINATIONS.each do |combo|
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
           move = combo[2] + 1
+          binding.pry
         else
           move = board.cells.index(" ") + 1
         end
