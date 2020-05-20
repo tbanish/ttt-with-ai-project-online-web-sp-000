@@ -21,7 +21,6 @@ module Players
     
     def default_move(board)
       move = board.cells.index(" ") + 1
-      move.to_s
     end
     
     def check_wins(board)
