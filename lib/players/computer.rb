@@ -20,13 +20,13 @@ module Players
       
       WIN_COMBINATIONS.map do |combo|
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-          combo[2]
-          binding.pry
+          move = combo[2] + 1
+          move.to_s
         else
           move = board.cells.index(" ") + 1
+          move.to_s
         end
       end
-      move.to_s
     end
   end
 end
