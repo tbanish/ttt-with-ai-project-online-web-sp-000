@@ -15,8 +15,8 @@ module Players
     [6, 4, 2]
   ]
     
-    def move
-      move = @board.cells.index(" ") + 1
+    def move(board)
+      move = board.cells.index(" ") + 1
       move.to_s
     end
   end
