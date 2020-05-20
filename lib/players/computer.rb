@@ -14,13 +14,15 @@ module Players
     [0, 4, 8],
     [6, 4, 2]
   ]
-    
+    def initialize(board)
+      @board = board
+    end
     def move(board)
       any_open_space
     end
     
     def any_open_space
-      move = @board.@cells.index(" ") + 1
+      move = @board.cells.index(" ") + 1
       move.to_s
     end
     
