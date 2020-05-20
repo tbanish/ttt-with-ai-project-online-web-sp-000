@@ -17,19 +17,8 @@ module Players
     
     def move(board)
       move = ""
-      if board.turn_count == 0
-        move = "5"
-      end
-      
-      case board.turn_count == 1
-      when board.cells[4] == " "
-        move = "5"
-      when board.cells[4] == "X"
-        move = "1"
-      end
-      
-      case board.turn_count > 1
-      when @token == "X"
+
+      if board.turn_count % 2 == 0
         WIN_COMBINATIONS.find do |combo|
           if @token == "X" && board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
             move = combo[2] + 1
