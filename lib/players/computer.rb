@@ -16,7 +16,7 @@ module Players
   ]
     
     def move(board)
-      any_open_space(board)
+      any_open_space
     end
     
     def any_open_space
