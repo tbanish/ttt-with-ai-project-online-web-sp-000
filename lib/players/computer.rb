@@ -22,11 +22,10 @@ module Players
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
           move = combo[2] + 1
         else
-          move = board.cells.index(" ") + 1
+          move = nil
         end
       end
       move.to_s
-     # binding.pry
     end
   end
 end
