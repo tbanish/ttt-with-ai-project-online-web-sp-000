@@ -18,7 +18,7 @@ module Players
     def move(board)
       move = ""
       
-      WIN_COMBINATIONS.map do |combo|
+      WIN_COMBINATIONS.each do |combo|
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
           move = combo[2] + 1
         else
