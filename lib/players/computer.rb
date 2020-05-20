@@ -27,7 +27,8 @@ module Players
       elsif board.cells[8] == " "
         "9"
       else
-      any_open_space(board)
+        any_open_space(board)
+      end
     end
     
     def any_open_space(board)
