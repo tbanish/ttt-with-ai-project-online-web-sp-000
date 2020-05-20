@@ -44,7 +44,7 @@ class Game
   
   def turn
     puts "Player #{current_player.token}'s turn:"
-    input = current_player.move.to_i
+    input = current_player.move(board).to_i
     if board.valid_move?(input.to_s)
       board.update(input, current_player)
       board.display
