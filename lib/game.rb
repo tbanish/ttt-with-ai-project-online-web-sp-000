@@ -44,12 +44,10 @@ class Game
   
   def turn
     puts "Player #{current_player.token}'s turn:"
-    binding.pry
     input = current_player.move(board).to_i
     if board.valid_move?(input.to_s)
       board.update(input, current_player)
       board.display
-    binding.pry
     else
       puts "Invalid move, please try again."
       puts input
