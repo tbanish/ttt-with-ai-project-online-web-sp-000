@@ -23,6 +23,7 @@ module Players
           move = combo[2] + 1
         else
           move = board.cells.index(" ") + 1
+          binding.pry
         end
       end
       move.to_s
