@@ -24,10 +24,10 @@ module Players
       move.to_s
     end
     
-    # def check_wins(board)
-    #   WIN_COMBINATIONS.each do |combo|
-    #     if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo]
-    # end
+    def check_wins(board)
+      WIN_COMBINATIONS.each do |combo|
+        if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo]
+    end
       
       
       
