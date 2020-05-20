@@ -20,7 +20,7 @@ module Players
       
 
       if (board.cells[1] == "O" && board.cells[2] == "O" && board.cells[0] == " ") || (board.cells[3] == "O" && board.cells[6] == "O" && board.cells[0] == " ")
-          move = "1"
+        move = "1"
       elsif (board.cells[0] == "O" && board.cells[2] == "O" && board.cells[1] == " ") || (board.cells[4] == "O" && board.cells[7] == "O" && board.cells[1] == " ")
         move = "2"
       elsif (board.cells[0] == "O" && board.cells[1] == "O" && board.cells[2] == " ") || (board.cells[5] == "O" && board.cells[8] == "O" && board.cells[2] == " ")
