@@ -33,7 +33,7 @@ module Players
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
           combo[2] + 1
         else
-          nil
+         return nil
         end
       end
     end
