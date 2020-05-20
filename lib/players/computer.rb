@@ -25,8 +25,8 @@ module Players
         else
           move = board.cells.index(" ") + 1
         end
+        move.to_s
       end
-      move.to_s
     end
     
     
