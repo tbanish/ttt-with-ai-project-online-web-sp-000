@@ -21,13 +21,14 @@ module Players
       WIN_COMBINATIONS.each do |combo|
         if board.cells[combo[0]] == @token && board.cells[combo[1]] == board.cells[combo[0]] && board.cells[combo[2]] == " "
           move = combo[2] + 1
+        else
+          
         end
-      end
-
-      
       end
       move.to_s
     end
+    
+    
   end
 end
 
