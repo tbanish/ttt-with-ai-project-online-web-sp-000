@@ -16,8 +16,57 @@ module Players
   ]
     
     def move(board)
+      move = ""
+      if board.turn_count == 0
+        move = "5"
+      end
       
+      case board.turn_count == 1
+      when board.cells[4] == " "
+        move = "5"
+      when board.cells[4] == "X"
+        move = "1"
+      end
       
+      case board.turn_count > 1
+      when @token == "X"
+        WIN_COMBINATIONS.find do |combo|
+          if @token == "X" && board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
+            move = combo[2] + 1
+          elsif @token == "X" && board.cells[combo[0]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[1]] == " "
+            move = combo[1] + 1
+          elsif @token == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[0]] == " "
+            move = combo[0] + 1
+          elsif @token == "X" && board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " "
+            move = combo[2] + 1
+          elsif @token == "X" && board.cells[combo[0]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[1]] == " "
+            move = combo[1] + 1
+          elsif @token == "X" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[0]] == " "
+            move = combo[0] + 1
+          else
+            move = board.cells.index(" ") + 1
+          end
+        end
+      when @token == "O"
+        WIN_COMBINATIONS.find do |combo|
+          if board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " "
+            move = combo[2] + 1
+          elsif board.cells[combo[0]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[1]] == " "
+            move = combo[1] + 1
+          elsif board.cells[combo[1]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[0]] == " "
+            move = combo[0] + 1
+          elsif board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
+            move = combo[2] + 1
+          elsif board.cells[combo[0]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[1]] == " "
+            move = combo[1] + 1
+          elsif board.cells[combo[1]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[0]] == " "
+            move = combo[0] + 1
+          else
+            move = board.cells.index(" ") + 1
+          end
+        end
+      end
+      move.to_s
     end
   end
 end
