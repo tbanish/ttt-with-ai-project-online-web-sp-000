@@ -16,7 +16,7 @@ module Players
   ]
     
     def move(board)
-      check_wins(board)
+      check_wins(board).to_s
     end
     
     def default_move(board)
