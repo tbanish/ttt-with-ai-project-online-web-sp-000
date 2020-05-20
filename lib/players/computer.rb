@@ -24,9 +24,9 @@ module Players
           binding.pry
         else
           move = board.cells.index(" ") + 1
-          move.to_s
         end
       end
+      move.to_s
     end
   end
 end
