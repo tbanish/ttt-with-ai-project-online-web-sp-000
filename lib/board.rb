@@ -26,7 +26,6 @@ class Board
   end
   
   def turn_count
-    #binding.pry 
     cells.count {|t| t=="X" || t=="O"}
   end
   
