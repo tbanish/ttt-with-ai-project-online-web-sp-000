@@ -22,7 +22,7 @@ module Players
         if board.cells[combo[0]] == @token && board.cells[combo[1]] == board.cells[combo[0]] && board.cells[combo[2]] == " "
           move = combo[2] + 1
         else
-          move = board.
+          move = board.cells.index
         end
       end
       move.to_s
