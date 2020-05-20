@@ -19,7 +19,7 @@ module Players
       any_open_space
     end
     
-    def any_open_space
+    def any_open_space(board)
       move = board.cells.index(" ") + 1
       move.to_s
     end
