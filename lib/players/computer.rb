@@ -15,26 +15,8 @@ module Players
     [6, 4, 2]
   ]
     
-    def move(board)
-      move = ""
-      
-      WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " "
-          move = combo[2] + 1
-        elsif board.cells[combo[0]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[1]] == " "
-          move = combo[1] + 1
-        elsif board.cells[combo[1]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[0]] == " "
-          move = combo[0] + 1
-        elsif board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-          move = combo[2] + 1
-        elsif board.cells[combo[0]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[1]] == " "
-          move = combo[1] + 1
-        elsif board.cells[combo[1]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[0]] == " "
-          move = combo[0] + 1
-        else
-          move = board.cells.index(" ") + 1
-        end
-      end
+    def move
+      move = @board.cells.index(" ") + 1
       move.to_s
     end
   end
