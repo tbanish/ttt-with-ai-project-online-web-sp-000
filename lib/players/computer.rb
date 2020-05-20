@@ -20,7 +20,8 @@ module Players
       
       WIN_COMBINATIONS.map do |combo|
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-          move = combo[2] + 1
+          combo[2]
+          binding.pry
         else
           move = board.cells.index(" ") + 1
         end
