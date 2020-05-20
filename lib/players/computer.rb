@@ -26,7 +26,7 @@ module Players
         end
       end
       move.to_s
-      binding.pry
+     # binding.pry
     end
   end
 end
