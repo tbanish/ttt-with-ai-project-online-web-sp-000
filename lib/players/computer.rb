@@ -18,13 +18,13 @@ module Players
     def move(board)
       move = ""
       
-      WIN_COMBINATIONS.each do |combo|
-        if board.cells[combo[0]] == "X" && board.cells[combo[1]] == board.cells[combo[0]] && board.cells[combo[2]] == " "
-          move = combo[2] + 1
-        else
-          move = board.cells.index(" ") + 1
-        end
-      end
+      if board.cells[0] == "X" && board.cells[4] == "X" && boar.cells[8] == " "
+        move = board.cells[8] + 1
+      else
+        move = board.cells
+
+
+
       move.to_s
     end
     
