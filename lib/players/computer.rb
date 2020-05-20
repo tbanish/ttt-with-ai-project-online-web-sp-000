@@ -18,7 +18,7 @@ module Players
     def move(board)
       move = ""
 
-      if board.turn_count % 2 == 0
+      if @token == "X"
         WIN_COMBINATIONS.each do |combo|
           if @token == "X" && board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
             move = combo[2] + 1
@@ -36,7 +36,7 @@ module Players
             move = board.cells.index(" ") + 1
           end
         end
-      elsif board.turn_count % 2 != 0
+      elsif @token == "O"
         WIN_COMBINATIONS.each do |combo|
           if board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " "
             move = combo[2] + 1
