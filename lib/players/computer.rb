@@ -19,8 +19,11 @@ module Players
       move = ""
       
       WIN_COMBINATIONS.each do |combo|
-        board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-        move = combo[2] + 1
+        if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
+          move = combo[2] + 1
+        else
+          move = board.cells.index(" ") + 1
+        end
       end
       move.to_s
     end
