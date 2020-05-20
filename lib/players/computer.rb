@@ -16,9 +16,16 @@ module Players
   ]
     
     def move(board)
+      default_move(board)
+    end
+    
+    def default_move(board)
       move = board.cells.index(" ") + 1
       move.to_s
     end
+      
+      
+      
   end
 end
 
