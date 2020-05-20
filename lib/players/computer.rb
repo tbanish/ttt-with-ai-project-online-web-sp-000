@@ -17,9 +17,9 @@ module Players
     
     def move(board)
       if check_wins(board) != nil
-        return check_wins(board).to_s
+        check_wins(board).to_s
       else
-        return default_move(board)
+        default_move(board)
       end
     end
     
@@ -31,7 +31,7 @@ module Players
     def check_wins(board)
       WIN_COMBINATIONS.each do |combo|
         if board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " "
-          return combo[2] + 1
+          combo[2] + 1
         else
           return nil
         end
