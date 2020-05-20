@@ -21,10 +21,8 @@ module Players
       if board.cells[0] == "X" && board.cells[4] == "X" && boar.cells[8] == " "
         move = board.cells[8] + 1
       else
-        move = board.cells
-
-
-
+        move = board.cells.index(" ") + 1
+      end
       move.to_s
     end
     
